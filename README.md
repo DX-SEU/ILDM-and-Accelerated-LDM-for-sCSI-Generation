@@ -12,8 +12,6 @@ We propose the improved latent diffusion model (ILDM) and its accelerated versio
 
 ### Installation
 
-#### Create a conda environment and install
-
 ```python
 conda create -n ildm python=3.8.20
 conda activate ildm
@@ -24,12 +22,6 @@ pip install matplotlib==3.3.3 -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install scipy==1.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-#### Other dependencies
-
-```python
-pip install h5py
-pip install numpy==1.19.5
-```
 
 ### Data Preparation
 
