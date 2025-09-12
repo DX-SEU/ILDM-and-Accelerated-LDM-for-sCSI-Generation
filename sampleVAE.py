@@ -37,9 +37,3 @@ vae_rec_train[batchN*(cnt+1):trainNum, :, :, :] = np.array(model.decoder(z_sampl
 vae_rec_train = vae_rec_train.reshape((trainNum, img_size, img_size))
 sio.savemat('data/ILDM_dataset/vae_lat_train.mat', {'vae_lat_train': vae_lat_train})
 sio.savemat('data/ILDM_dataset/vae_rec_train.mat', {'vae_rec_train': vae_rec_train})
-
-
-
-
-
-
