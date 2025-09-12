@@ -15,7 +15,7 @@ We propose the improved latent diffusion model (ILDM) and its accelerated versio
 #### Create a conda environment and install
 
 ```python
-conda create -n ildm python=2.9
+conda create -n ildm python=3.8.20
 conda activate ildm
 pip install tensorflow==2.6.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install keras==2.6.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
