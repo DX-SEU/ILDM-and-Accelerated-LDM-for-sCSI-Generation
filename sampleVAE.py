@@ -3,10 +3,8 @@ import numpy as np
 import h5py
 import scipy.io as sio
 from myVAE import *
-
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
+
 
 trainFile = 'data/VAE_dataset/ADCPMTrain.mat'
 trainData = h5py.File(trainFile)
@@ -37,4 +35,5 @@ vae_rec_train[batchN*(cnt+1):trainNum, :, :, :] = np.array(model.decoder(z_sampl
 vae_rec_train = vae_rec_train.reshape((trainNum, img_size, img_size))
 sio.savemat('data/ILDM_dataset/vae_lat_train.mat', {'vae_lat_train': vae_lat_train})
 sio.savemat('data/ILDM_dataset/vae_rec_train.mat', {'vae_rec_train': vae_rec_train})
+
 
