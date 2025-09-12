@@ -5,10 +5,7 @@ import h5py
 from myVAE import *
 from myUNet import *
 import time
-
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 
 class GaussianDiffusion:
@@ -156,5 +153,6 @@ ildm_rec_test = model.plot_images(LocTrain, num_cols=1020)
 e1 = time.time()
 print(e1 - s1)
 sio.savemat('data/results/ildm_rec_test.mat', {'ildm_rec_test': ildm_rec_test})
+
 
 
