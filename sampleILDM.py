@@ -131,7 +131,7 @@ latent_dim = latent_size ** 2
 weight_res = 1
 activation = "ELU"
 vae = VAEModel(latent_dim, activation, weight_res)
-vae.load_weights("ckpt_file/VAE64/model_1/vae.ckpt")
+vae.load_weights("ckpt_file/VAE64/model_1/vae.ckpt")  # Change to the saved model weight path
 # Build the unet model
 network = build_model(
     img_size=latent_size,
@@ -150,10 +150,11 @@ model = DiffusionModel(
     gdf_util=gdf_util,
     timesteps=total_timesteps,
 )
-model.load_weights("ckpt_file/ILDM/model_1/ILDM.ckpt")
+model.load_weights("ckpt_file/ILDM/model_1/ILDM.ckpt")  # Change to the saved model weight path
 s1 = time.time()
 ildm_rec_test = model.plot_images(LocTrain, num_cols=1020)
 e1 = time.time()
 print(e1 - s1)
 sio.savemat('data/results/ildm_rec_test.mat', {'ildm_rec_test': ildm_rec_test})
+
 
