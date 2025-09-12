@@ -6,7 +6,6 @@ from myVAE import *
 
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 
 class MyCallBack(tf.keras.callbacks.Callback):
@@ -58,4 +57,5 @@ io.savemat('results/reconstruction_loss.mat', {'reconstruction_loss': reconstruc
 kl_loss = history.history['kl_loss']
 io.savemat('results/kl_loss.mat', {'kl_loss': kl_loss})
 total_loss = history.history['total_loss']
+
 io.savemat('results/total_loss.mat', {'total_loss': total_loss})
