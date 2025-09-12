@@ -1,6 +1,5 @@
 clc;clear;
 addpath quadriga_src\
-rng(3)
 Nr = 128;               % Number of received antennas
 Nv = 128;               % Number of valid subscarriers
 Ng = 144;               % Number of cyclic prefix
@@ -20,7 +19,7 @@ para_layout.set_scenario('3GPP_38.901_UMa_NLOS');                       % Set sc
 para_layout.rx_array = qd_arrayant.generate('3gpp-3d', 1, Nr, fc, 1);   % Set the receive antenna (BS)
 para_layout.rx_position = [0, 0, 25]';                                  % Receiver plsition
 para_layout.tx_array = qd_arrayant.generate('omni');                    % Set the transmit antenna (UT)
-numSum = 10;                % The number of expectation for statistal channel acquisition
+numSum = 500;                % The number of expectation for statistal channel acquisition
 space = 1;                  % Grid space
 grid_len = 100;             % Length of target area
 grid_center = [200, 0];     % Center coordinate of the target area
@@ -38,8 +37,8 @@ axis equal
 %% Generate channel
 % These parameters can be adjustable
 cb = para_layout.init_builder;
-numCluster = 3;
-cb.scenpar.DS_mu = -6.8;
+numCluster = 30;
+cb.scenpar.DS_mu = -7.2;
 cb.scenpar.DS_sigma = 0.5;
 cb.scenpar.SF_sigma = 0;
 cb.scenpar.NumClusters = numCluster;
