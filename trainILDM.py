@@ -4,7 +4,6 @@ import scipy.io as sio
 import h5py
 from myUNet import *
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
 
 class GaussianDiffusion:
@@ -140,4 +139,5 @@ history = model.fit(
     callbacks=[checkpoint_callback1],
 )
 loss = history.history['loss']
+
 sio.savemat('results/loss.mat', {'loss': loss})
