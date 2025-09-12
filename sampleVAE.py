@@ -19,7 +19,7 @@ latent_dim = latent_size ** 2
 weight_res = 1
 activation = "ELU"
 model = VAEModel(latent_dim, activation, weight_res)
-model.load_weights("ckpt_file/VAE64/model_1/vae.ckpt")
+model.load_weights("ckpt_file/VAE64/model_1/vae.ckpt")  # Change to the saved model weight path
 trainNum = ADCPMTrain.shape[0]
 vae_lat_train = np.zeros((trainNum, latent_size, latent_size))
 vae_rec_train = np.zeros((trainNum, img_size, img_size, 1))
@@ -37,3 +37,4 @@ vae_rec_train[batchN*(cnt+1):trainNum, :, :, :] = np.array(model.decoder(z_sampl
 vae_rec_train = vae_rec_train.reshape((trainNum, img_size, img_size))
 sio.savemat('data/ILDM_dataset/vae_lat_train.mat', {'vae_lat_train': vae_lat_train})
 sio.savemat('data/ILDM_dataset/vae_rec_train.mat', {'vae_rec_train': vae_rec_train})
+
