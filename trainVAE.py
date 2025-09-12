@@ -3,8 +3,6 @@ import numpy as np
 import h5py
 from scipy import io
 from myVAE import *
-
-
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
@@ -59,3 +57,4 @@ io.savemat('results/kl_loss.mat', {'kl_loss': kl_loss})
 total_loss = history.history['total_loss']
 
 io.savemat('results/total_loss.mat', {'total_loss': total_loss})
+
