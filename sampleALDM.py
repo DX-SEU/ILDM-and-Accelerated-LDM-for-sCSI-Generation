@@ -6,7 +6,6 @@ from myVAE import *
 from myUNet import *
 import time
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-os.environ['CUDA_VISIBLE_DEVICES'] = "1"
 
 
 class GaussianDiffusion:
@@ -122,6 +121,7 @@ aldm_rec_test = model.plot_images(LocTrain, num_cols=1020)
 e1 = time.time()
 print(e1 - s1)
 io.savemat('data/results/aldm_rec_test.mat', {'aldm_rec_test': aldm_rec_test})
+
 
 
 
