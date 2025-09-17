@@ -41,6 +41,11 @@ pip install scipy==1.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 - ILDM: Run **sampleILDM.py**.
 - Accelerated ILDM: Run **sampleALDM.py**.
 
+### Our Dataset and Model Checkpoints
+1. Dataset: https://huggingface.co/datasets/DX-SEU/sCSI.
+2. VAE Model Weights: https://huggingface.co/DX-SEU/VAE64.
+3. ILDM Model Weigths: https://huggingface.co/DX-SEU/ILDM.
+
 ## Citation
 
 If you find our work useful in your research, please consider citing:
