@@ -84,3 +84,17 @@ save('data/VAE_dataset/ADCPMTrain.mat', 'ADCPMTrain', 'ADCPMTrain', '-v7.3');
 save('data/VAE_dataset/ADCPMTest.mat', 'ADCPMTest', 'ADCPMTest', '-v7.3');
 save('data/ILDM_dataset/trainLoc.mat', 'trainLoc', 'trainLoc', '-v7.3');
 save('data/ILDM_dataset/testLoc.mat', 'testLoc', 'testLoc', '-v7.3');
+
+
+function y = gen_grid(xtick, ytick, numSum)
+space = xtick(2) - xtick(1);
+y = zeros(3, length(xtick)*length(ytick)*numSum);
+oricor = zeros(2, length(xtick)*length(ytick));
+a = repmat(xtick, length(xtick), 1);
+oricor(1, :) = a(:)';
+oricor(2, :) = repmat(ytick, 1, length(ytick));
+xtemp = rand(numSum, length(xtick)*length(ytick)) * space - space / 2 + repmat(oricor(1, :), numSum, 1);
+ytemp = rand(numSum, length(xtick)*length(ytick)) * space - space / 2 + repmat(oricor(2, :), numSum, 1);
+y(1, :) = xtemp(:)';
+y(2, :) = ytemp(:)';
+end
