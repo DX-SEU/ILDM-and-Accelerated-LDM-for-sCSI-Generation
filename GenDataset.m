@@ -19,7 +19,7 @@ para_layout.set_scenario('3GPP_38.901_UMa_NLOS');                       % Set sc
 para_layout.rx_array = qd_arrayant.generate('3gpp-3d', 1, Nr, fc, 1);   % Set the receive antenna (BS)
 para_layout.rx_position = [0, 0, 25]';                                  % Receiver plsition
 para_layout.tx_array = qd_arrayant.generate('omni');                    % Set the transmit antenna (UT)
-numSum = 500;                % The number of expectation for statistal channel acquisition
+numSum = 500;               % The number of expectation for statistal channel acquisition
 space = 1;                  % Grid space
 grid_len = 100;             % Length of target area
 grid_center = [200, 0];     % Center coordinate of the target area
