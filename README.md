@@ -49,8 +49,8 @@ pip install scipy==1.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ## Citation
 
 If you find our work useful in your research, please consider citing:
-
-`@ARTICLE{11247875,
+```python
+@ARTICLE{11247875,
   author={Dong, Xu and Gong, Xinrui and Lu, An-An and Gao, Xiqi and Xia, Xiang-Gen and Zeng, Yong and Wang, Cheng-Xiang},
   journal={IEEE Transactions on Wireless Communications}, 
   title={Accelerated LDM-Enabled Digital Twin of Channel for Massive MIMO Statistical CSI Generation}, 
@@ -59,4 +59,4 @@ If you find our work useful in your research, please consider citing:
   number={},
   pages={1-1},
   keywords={Digital twins;Diffusion models;Generative AI;6G mobile communication;Physical layer;Massive MIMO;Integrated sensing and communication;Wireless communication;Vectors;Diffusion processes;Integrated sensing and communication;digital twin of channel;improved latent diffusion model;accelerated LDM;sCSI generation},
-  doi={10.1109/TWC.2025.3629739}}`
+  doi={10.1109/TWC.2025.3629739}}
