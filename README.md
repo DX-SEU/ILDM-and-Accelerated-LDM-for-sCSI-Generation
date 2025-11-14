@@ -49,7 +49,7 @@ pip install scipy==1.10.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
 ## Citation
 
 If you find our work useful in your research, please consider citing:
-```python
+```
 @ARTICLE{11247875,
   author={Dong, Xu and Gong, Xinrui and Lu, An-An and Gao, Xiqi and Xia, Xiang-Gen and Zeng, Yong and Wang, Cheng-Xiang},
   journal={IEEE Transactions on Wireless Communications}, 
